@@ -111,12 +111,13 @@
 <button onclick="goFullscreen('embededGame'); return false">Fullscreen</button>
 <script>
 function goFullscreen(id) {
-var element = document.getElementById(id);
-if (element.mozRequestFullScreen) {
-element.mozRequestFullscreen();
-} else if (element.webkitRequestFullScreen) {
-element.webkitRequestFullscreen();
-	}
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
 }
 </script>
 <button>comment</button>
