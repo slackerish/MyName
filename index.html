@@ -107,17 +107,17 @@
 			    position:relative;
 		    }
 	    </style>
-<button onclick="goFullscreen('embededGame'); return false">FullScreen</button>
-	    <script>
-		    function goFullscreen(id) {
-			    var element = document.getElementById(id);
-			    if (element.mozRequestFullscreen) {
-				    element.mozRequestFullscreen();
-			    } else if (element.webkitRequestFullscreen) {
-			    element.webkitRequestFullscreen();
-			    }
-		    }
-	    </script>
+<button onclick="goFullscreen('embededGame'); return false">Fullscreen</button>
+<script>
+function goFullscreen(id) {
+var element = document.getElementById(id);
+if (element.mozRequestFullScreen) {
+element.mozRequestFullscreen();
+} else if (element.webkitRequestFullScreen) {
+element.webkitRequestFullscreen();
+}
+}
+</script>
       <h2>Recommened Games</h2>
       <div id="games">
         <p id="message">games loading..</p>
