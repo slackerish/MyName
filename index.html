@@ -98,7 +98,41 @@
           document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/a4e483c304d8788fbb3f86d0fccd7dd2/invoke.js"></scr' + 'ipt>');
         </script>
       </div>
+<div id="MyBox">
+	Fullscreen
+</div>
+	    <style>
+		    #MyBox {
+			    width: 108px;
+			    height: 75px;
+			    background: blue;
+			    padding: 20px; 
+		    }
+	    </style>
+	    <script>
+		    function getFullscreenElement() {
+			    return document.fullscreenElement
+			    || document.FullscreenElement
+			    || document.webkitFullScreenElement
+			    || document.mozFullscreenElement
+			    || document.msFullscreenElement;
+		    }
 
+		    function toggleFullscreen() {
+			    if (getFullscreenElement()) {
+				    document.exitFullscreen();
+			    } else {
+				    document.getElementById("MyBox").documentElement.requestFullscreen().catch(console.log);
+			    }
+		    }
+		    
+		    document.addEventListened("dbclick", () => {
+			    toggleFullscreen();
+		    });
+		    document.addEventListener("fullscreen", () => {
+			    console.log("full screen off"); 
+		    });
+	    </script>
 
       <h2>Recommened Games</h2>
       <div id="games">
