@@ -32,24 +32,6 @@
 <link rel="stylesheet" href="/themes.css" />
     <title>Test New Game | Debug</title>
     <link rel="icon" href="/favicon.ico" />
-    <!-- toastify -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        setTimeout(() => {
-          const container = document.querySelector("alerts");
-          const safemodealert = container.querySelector(`sl-alert.safemodeinfo`);
-          const tooltip = document.querySelector('.manual-tooltip');
-          if (Math.random() < 0.33) {
-            safemodealert.toast();
-          } else if(Math.random() < 0.5) {
-            tooltip.open = !tooltip.open;
-            setTimeout(() => {
-              tooltip.open = !tooltip.open;
-            }, 5000)
-          }
-        }, 500);
-      });
-    </script>
   </head>
   <alerts>
     <sl-alert class="safemodeinfo" variant="primary" duration="6000" closable>
